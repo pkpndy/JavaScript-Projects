@@ -25,26 +25,26 @@ window.onload = () => {
   
   
   function getOriginals() {
-    let url='https://api.themoviedb.org/3/discover/tv?api_key=19f84e11932abbc79e6d83f82d6d1045&with_networks=213'
+    let url='https://api.themoviedb.org/3/discover/tv?api_key='
     fetchMovies(url,'.original__movies', 'poster_path' )
   
   }
 
   function getTrendingNow() {
-    let url= 'https://api.themoviedb.org/3/trending/movie/week?api_key=19f84e11932abbc79e6d83f82d6d1045'
+    let url= 'https://api.themoviedb.org/3/trending/movie/week?api_key='
     fetchMovies(url,'#trending', 'backdrop_path' )
   
   }
 
   function getTopRated() {
-    let url='https://api.themoviedb.org/3/movie/top_rated?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US&page=1'
+    let url='https://api.themoviedb.org/3/movie/top_rated?api_key=&language=en-US&page=1'
     fetchMovies(url,'#top_rated', 'backdrop_path' )
   
   }
   
 
   async function getMovieTrailer(id) {
-    let URL= `https://api.themoviedb.org/3/movie/${id}/videos?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US`
+    let URL= `https://api.themoviedb.org/3/movie/${id}/videos?api_key=&language=en-US`
     let response= await fetch(URL)
     let data= await response.json()
     return data
